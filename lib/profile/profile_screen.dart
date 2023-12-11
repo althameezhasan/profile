@@ -10,7 +10,7 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
-  final List<String> vehicles = ['Car', 'Motorcycle', 'Bicycle', 'Truck'];
+  final List<String> vehicles = ['Car', 'Motorcycle', 'Auto', 'Bike'];
   String buttonLabel = "Update ";
 
   @override
@@ -80,7 +80,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             color: Colors.green,
                           ),
                           child: Icon(
-                           Icons.edit,
+                            Icons.edit,
                             color: Colors.white,
                           ),
                         )),
@@ -121,7 +121,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                           color: const Color.fromARGB(255, 143, 139, 139),
-
                         ),
                         border: InputBorder.none,
                       ),
@@ -141,8 +140,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10.0),
                       border: Border.all(
-                      color: const Color.fromARGB(255, 143, 139, 139),
-
+                        color: const Color.fromARGB(255, 143, 139, 139),
                         width: 2.0,
                       ),
                     ),
@@ -157,7 +155,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                           color: const Color.fromARGB(255, 143, 139, 139),
-
                         ),
                         border: InputBorder.none,
                       ),
@@ -177,8 +174,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10.0),
                       border: Border.all(
-                  color: const Color.fromARGB(255, 143, 139, 139),
-
+                        color: const Color.fromARGB(255, 143, 139, 139),
                         width: 2.0,
                       ),
                     ),
@@ -202,8 +198,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         hintStyle: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
-                         color: const Color.fromARGB(255, 143, 139, 139),
-
+                          color: const Color.fromARGB(255, 143, 139, 139),
                         ),
                         border: InputBorder.none,
                       ),
@@ -223,8 +218,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10.0),
                       border: Border.all(
-                  color: const Color.fromARGB(255, 143, 139, 139),
-
+                        color: const Color.fromARGB(255, 143, 139, 139),
                         width: 2.0,
                       ),
                     ),
@@ -267,8 +261,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10.0),
                       border: Border.all(
-                     color: const Color.fromARGB(255, 143, 139, 139),
-
+                        color: const Color.fromARGB(255, 143, 139, 139),
                         width: 2.0,
                       ),
                     ),
@@ -280,8 +273,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         hintStyle: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
-                       color: const Color.fromARGB(255, 143, 139, 139),
-
+                          color: const Color.fromARGB(255, 143, 139, 139),
                         ),
                         border: InputBorder.none,
                       ),

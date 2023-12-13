@@ -140,8 +140,8 @@ class _Main_ProfileState extends State<Main_Profile> {
             ),
             SizedBox(height: 16),
             buildNotificationOptionRow("New for you", true),
-            buildNotificationOptionRow("Account Activity", true),
-            buildNotificationOptionRow("Opportunity", false),
+            buildNotificationOptionRow("Account Activity", false),
+            buildNotificationOptionRow("Opportunity", true),
             SizedBox(
               height: 50,
             ),
@@ -175,7 +175,7 @@ class _Main_ProfileState extends State<Main_Profile> {
         Transform.scale(
             scale: 0.7,
             child: CupertinoSwitch(
-              value: true,
+              value: isActive,
               onChanged: (bool val) {},
             ))
       ],

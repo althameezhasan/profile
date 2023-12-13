@@ -2,6 +2,8 @@ import 'dart:ffi';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:profile_design_1/profile/profile_page.dart';
+import 'package:profile_design_1/profile/profile_screen.dart';
 
 class Main_Profile extends StatefulWidget {
   const Main_Profile({super.key});
@@ -22,7 +24,14 @@ class _Main_ProfileState extends State<Main_Profile> {
             Icons.arrow_back,
             color: Colors.green,
           ),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => Profile_Page(),
+              ),
+            );
+          },
         ),
         title: Text(
           'Profile',
@@ -73,21 +82,32 @@ class _Main_ProfileState extends State<Main_Profile> {
                   ],
                 ),
                 SizedBox(width: 16.0),
-                Row(
-                  children: [
-                    // Space between icon and text
-                    Text(
-                      "Edit",
-                      style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                    ),
-                    Icon(
-                      Icons.edit,
-                      color: Colors.green,
-                    ),
-                    SizedBox(height: 8.0),
-                  ],
-                ),
+                // Row(
+                //   children: [
+                //     // Space between icon and text
+                //     Text(
+                //       "Edit",
+                //       style:
+                //           TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                //     ),
+                //     IconButton(
+                //       icon: Icon(
+                //         Icons.edit,
+                //         color: Colors.green,
+                //       ),
+                //       onPressed: () {
+                //         // Navigate to another page
+                //         Navigator.push(
+                //           context,
+                //           MaterialPageRoute(
+                //             builder: (context) => ProfileScreen(),
+                //           ),
+                //         );
+                //       },
+                //     ),
+                //     SizedBox(height: 8.0),
+                //   ],
+                // ),
               ],
             ),
             Divider(

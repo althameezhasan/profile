@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:profile_design_1/profile/profile_page.dart';
+import 'package:profile_design_1/profile/update_profile_screen.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -24,7 +26,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
             Icons.arrow_back,
             color: Colors.green,
           ),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => Profile_Page(),
+              ),
+            );
+          },
         ),
         title: Text(
           'Profile',

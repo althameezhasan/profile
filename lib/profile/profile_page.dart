@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:profile_design_1/profile/postview.dart';
 import 'package:profile_design_1/profile/profile_screen.dart';
 import 'package:profile_design_1/profile/update_profile_screen.dart';
 
@@ -207,10 +208,37 @@ class _Profile_PageState extends State<Profile_Page> {
                   SizedBox(
                     height: 20,
                   ),
+                  // MyGridView(),
                   Container(
                     color: Colors.grey,
                   ),
                 ],
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: Text('Posts'),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: Text('Videos'),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: Text('Tags'),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 25,
+              ),
+              Expanded(
+                child: MyGridView(), // Initially show the Post grid
               ),
             ],
           ),

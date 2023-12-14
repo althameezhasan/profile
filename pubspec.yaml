@@ -91,3 +91,5 @@ flutter:
 
   assets:
     - AssetsImage/user_image.jpg
+    - AssetsImage/post3.jpg
+    - AssetsImage/post2.jpg

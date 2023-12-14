@@ -1,9 +1,6 @@
-import 'dart:ffi';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:profile_design_1/profile/profile_page.dart';
-import 'package:profile_design_1/profile/profile_screen.dart';
 
 class Main_Profile extends StatefulWidget {
   const Main_Profile({super.key});

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1077982159873",
+    "project_id": "email-log-3bed1",
+    "storage_bucket": "email-log-3bed1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1077982159873:android:080a03ca2b8c0641d08c00",
+        "android_client_info": {
+          "package_name": "com.example.profile_design_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVVG6ViqMMq9Dcek8eFC2aIlEI0tqcbXA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:profile_design_1/SignInScreens/signin_screen.dart';
 import 'package:profile_design_1/profile/profile_page.dart';
 
 class Main_Profile extends StatefulWidget {
@@ -144,7 +145,14 @@ class _Main_ProfileState extends State<Main_Profile> {
             ),
             Center(
               child: OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => SignInScreen(),
+                      ),
+                    );
+                  },
                   child: Text(
                     "SIGN OUT",
                     style: TextStyle(

@@ -1,7 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:profile_design_1/SignInScreens/signin_screen.dart';
 // import 'package:flutter_application_1/screens/home_screen.dart';
 // import 'package:profile_design_1/SignInScreens/home_screen.dart';
-import 'package:profile_design_1/profile/profile_page.dart';
+// import 'package:profile_design_1/profile/profile_page.dart';
 import 'package:profile_design_1/reusable/reusable_widget.dart';
 
 // import '../reusable_widget/resuable_widget.dart';
@@ -65,10 +67,19 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     height: 20,
                   ),
                   signInSignUpButton(context, false, () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => Profile_Page()));
+                    FirebaseAuth.instance
+                        .createUserWithEmailAndPassword(
+                            email: _emailTextController.text,
+                            password: _PasswordTextController.text)
+                        .then((value) {
+                      print("Created New Account");
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => SignInScreen()));
+                    }).onError((error, stackTrace) {
+                      print("Error${error.toString()}");
+                    });
                   })
                 ],
               ),

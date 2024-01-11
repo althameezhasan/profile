@@ -1,7 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 // import 'package:flutter_application_1/screens/signup_screen.dart';
 // import 'package:flutter_application_1/utils/color_utils.dart';
 import 'package:profile_design_1/SignInScreens/signup_screen.dart';
+import 'package:profile_design_1/profile/profile_page.dart';
 import 'package:profile_design_1/reusable/reusable_widget.dart';
 import 'package:profile_design_1/utils/color_utils.dart';
 
@@ -39,7 +41,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 SizedBox(
                   height: 30,
                 ),
-                reusableTextField("Enter Username", Icons.person_outline, false,
+                reusableTextField("Enter Email", Icons.person_outline, false,
                     _emailTextController),
                 SizedBox(
                   height: 20,
@@ -49,7 +51,20 @@ class _SignInScreenState extends State<SignInScreen> {
                 SizedBox(
                   height: 20,
                 ),
-                signInSignUpButton(context, true, () {}),
+                signInSignUpButton(context, true, () {
+                  FirebaseAuth.instance
+                      .signInWithEmailAndPassword(
+                          email: _emailTextController.text,
+                          password: _PasswordTextController.text)
+                      .then((value) {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Profile_Page()));
+                  }).onError((error, stackTrace) {
+                    print("Error ${error.toString()}");
+                  });
+                }),
                 signUpOption()
               ],
             ),

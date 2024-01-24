@@ -2,7 +2,8 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:profile_design_1/profile/profile_page.dart';
+import 'package:profile_design_1/Subscription/SubscriptionSinglePayment.dart';
+// import 'package:profile_design_1/profile/profile_page.dart';
 import 'package:profile_design_1/utils/color_utils.dart';
 
 class SubscriptionPage extends StatefulWidget {
@@ -33,29 +34,13 @@ class _SubscriptionPageState extends State<SubscriptionPage> {
             // );
           },
         ),
-        title: Text(
-          'Profile',
-          style: TextStyle(
-            color: Colors.green,
-          ),
-        ),
-        centerTitle: true,
-        actions: [
-          IconButton(
-            icon: Icon(
-              Icons.settings,
-              color: Colors.green,
-            ),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => Profile_Page(),
-                ),
-              );
-            },
-          ),
-        ],
+        // title: Text(
+        //   'Profile',
+        //   style: TextStyle(
+        //     color: Colors.green,
+        //   ),
+        // ),
+        //
       ),
       body: Container(
         padding: EdgeInsets.only(left: 16, top: 25, right: 16),
@@ -98,7 +83,7 @@ class _SubscriptionPageState extends State<SubscriptionPage> {
                     // end: Alignment.bottomCenter,
                     transform: GradientRotation(pi / 4),
                   ),
-                  borderRadius: BorderRadius.circular(30)),
+                  borderRadius: BorderRadius.circular(20)),
               padding: EdgeInsets.only(left: 16, top: 25, right: 16),
               child: Column(
                 children: [
@@ -108,18 +93,27 @@ class _SubscriptionPageState extends State<SubscriptionPage> {
                       // SizedBox(height: 0.0), // Space between icon and text
                       Text(
                         "Silver",
-                        style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
+                        style: TextStyle(fontSize: 18, color: Colors.white),
                       ),
                       SizedBox(height: 8.0), // Space between icon and text
-                      Text(
-                        "₹4.99/month",
-                        style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            '₹1004.99',
+                            style: TextStyle(
+                                fontSize: 24,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white),
+                          ),
+                          Text(
+                            '/yearly',
+                            style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400,
+                                color: Colors.white),
+                          ),
+                        ],
                       ),
                     ],
                   ),
@@ -131,29 +125,36 @@ class _SubscriptionPageState extends State<SubscriptionPage> {
                   Row(
                     children: [
                       Icon(
-                        Icons.check_box_sharp,
+                        Icons.add_task,
                         color: Colors.white,
                       ),
                       SizedBox(width: 12.0), // Space between icon and text
                       Text(
                         "Features 1",
                         style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.bold),
+                          fontSize: 18,
+                          color: Colors.white,
+                        ),
                       ),
                     ],
                   ),
-                  SizedBox(width: 16.0),
+                  SizedBox(
+                    width: 8,
+                    height: 2,
+                  ),
                   Row(
                     children: [
                       Icon(
-                        Icons.check_box_outlined,
+                        Icons.check_circle_rounded,
                         color: Colors.white,
                       ),
                       SizedBox(width: 12.0), // Space between icon and text
                       Text(
                         "Features 2",
                         style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.bold),
+                          fontSize: 18,
+                          color: Colors.white,
+                        ),
                       ),
                     ],
                   ),
@@ -177,19 +178,33 @@ class _SubscriptionPageState extends State<SubscriptionPage> {
                           ),
                         ),
                         onPressed: () {
-                          // Handle button 1 click
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SubscriptionSinglePayment(),
+                            ),
+                          );
                         },
                         child: Text(
                           'Single User',
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400),
                         ),
                       ),
-                      VerticalDivider(
-                        color: Colors.black, // Adjust the color as needed
-                        thickness: 4,
-                        width: 20,
-                        indent: 3,
-                        endIndent: 3, // Adjust the width as needed
+                      // VerticalDivider(
+                      //   color: const Color.fromARGB(
+                      //       255, 255, 255, 255), // Adjust the color as needed
+                      //   thickness: 4,
+                      //   width: 20,
+                      //   indent: 2,
+                      //   endIndent: 2, // Adjust the width as needed
+                      // ),
+                      Container(
+                        width: 1, // Adjust the width of the divider
+                        height: 30, // Adjust the height of the divider
+                        color: Colors.white, // Set the color of the divider
                       ),
                       TextButton(
                         style: TextButton.styleFrom(
@@ -204,7 +219,10 @@ class _SubscriptionPageState extends State<SubscriptionPage> {
                         },
                         child: Text(
                           'Multiple User',
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400),
                         ),
                       ),
                     ],
@@ -230,7 +248,7 @@ class _SubscriptionPageState extends State<SubscriptionPage> {
                     // end: Alignment.bottomCenter,
                     transform: GradientRotation(pi / 4),
                   ),
-                  borderRadius: BorderRadius.circular(30)),
+                  borderRadius: BorderRadius.circular(20)),
               padding: EdgeInsets.only(left: 16, top: 25, right: 16),
               child: Column(
                 children: [
@@ -240,16 +258,27 @@ class _SubscriptionPageState extends State<SubscriptionPage> {
                       // SizedBox(height: 0.0), // Space between icon and text
                       Text(
                         "Gold",
-                        style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.bold),
+                        style: TextStyle(fontSize: 18, color: Colors.white),
                       ),
                       SizedBox(height: 8.0), // Space between icon and text
-                      Text(
-                        "₹4.99/month",
-                        style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            '₹1004.99',
+                            style: TextStyle(
+                                fontSize: 24,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white),
+                          ),
+                          Text(
+                            '/yearly',
+                            style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400,
+                                color: Colors.white),
+                          ),
+                        ],
                       ),
                     ],
                   ),
@@ -261,29 +290,36 @@ class _SubscriptionPageState extends State<SubscriptionPage> {
                   Row(
                     children: [
                       Icon(
-                        Icons.check_box_sharp,
+                        Icons.add_task,
                         color: Colors.white,
                       ),
                       SizedBox(width: 12.0), // Space between icon and text
                       Text(
                         "Features 1",
                         style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.bold),
+                          fontSize: 18,
+                          color: Colors.white,
+                        ),
                       ),
                     ],
                   ),
-                  SizedBox(width: 16.0),
+                  SizedBox(
+                    width: 8,
+                    height: 2,
+                  ),
                   Row(
                     children: [
                       Icon(
-                        Icons.check_box_outlined,
+                        Icons.check_circle_rounded,
                         color: Colors.white,
                       ),
                       SizedBox(width: 12.0), // Space between icon and text
                       Text(
                         "Features 2",
                         style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.bold),
+                          fontSize: 18,
+                          color: Colors.white,
+                        ),
                       ),
                     ],
                   ),
@@ -314,12 +350,17 @@ class _SubscriptionPageState extends State<SubscriptionPage> {
                           style: TextStyle(color: Colors.white),
                         ),
                       ),
-                      VerticalDivider(
-                        color: Colors.black, // Adjust the color as needed
-                        thickness: 4,
-                        width: 20,
-                        indent: 3,
-                        endIndent: 3, // Adjust the width as needed
+                      // VerticalDivider(
+                      //   color: Colors.black, // Adjust the color as needed
+                      //   thickness: 4,
+                      //   width: 20,
+                      //   indent: 3,
+                      //   endIndent: 3, // Adjust the width as needed
+                      // ),
+                      Container(
+                        width: 1, // Adjust the width of the divider
+                        height: 30, // Adjust the height of the divider
+                        color: Colors.white, // Set the color of the divider
                       ),
                       TextButton(
                         style: TextButton.styleFrom(
@@ -360,7 +401,7 @@ class _SubscriptionPageState extends State<SubscriptionPage> {
                     // end: Alignment.bottomCenter,
                     transform: GradientRotation(pi / 4),
                   ),
-                  borderRadius: BorderRadius.circular(30)),
+                  borderRadius: BorderRadius.circular(20)),
               padding: EdgeInsets.only(left: 16, top: 25, right: 16),
               child: Column(
                 children: [
@@ -370,16 +411,27 @@ class _SubscriptionPageState extends State<SubscriptionPage> {
                       // SizedBox(height: 0.0), // Space between icon and text
                       Text(
                         "Platinum",
-                        style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.bold),
+                        style: TextStyle(fontSize: 18, color: Colors.white),
                       ),
                       SizedBox(height: 8.0), // Space between icon and text
-                      Text(
-                        "₹4.99/month",
-                        style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            '₹1004.99',
+                            style: TextStyle(
+                                fontSize: 24,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white),
+                          ),
+                          Text(
+                            '/yearly',
+                            style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400,
+                                color: Colors.white),
+                          ),
+                        ],
                       ),
                     ],
                   ),
@@ -391,29 +443,36 @@ class _SubscriptionPageState extends State<SubscriptionPage> {
                   Row(
                     children: [
                       Icon(
-                        Icons.check_box_sharp,
+                        Icons.add_task,
                         color: Colors.white,
                       ),
                       SizedBox(width: 12.0), // Space between icon and text
                       Text(
                         "Features 1",
                         style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.bold),
+                          fontSize: 18,
+                          color: Colors.white,
+                        ),
                       ),
                     ],
                   ),
-                  SizedBox(width: 16.0),
+                  SizedBox(
+                    width: 8,
+                    height: 2,
+                  ),
                   Row(
                     children: [
                       Icon(
-                        Icons.check_box_outlined,
+                        Icons.check_circle_rounded,
                         color: Colors.white,
                       ),
                       SizedBox(width: 12.0), // Space between icon and text
                       Text(
                         "Features 2",
                         style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.bold),
+                          fontSize: 18,
+                          color: Colors.white,
+                        ),
                       ),
                     ],
                   ),
@@ -444,12 +503,17 @@ class _SubscriptionPageState extends State<SubscriptionPage> {
                           style: TextStyle(color: Colors.white),
                         ),
                       ),
-                      VerticalDivider(
-                        color: Colors.black, // Adjust the color as needed
-                        thickness: 4,
-                        width: 20,
-                        indent: 3,
-                        endIndent: 3, // Adjust the width as needed
+                      // VerticalDivider(
+                      //   color: Colors.black, // Adjust the color as needed
+                      //   thickness: 4,
+                      //   width: 20,
+                      //   indent: 3,
+                      //   endIndent: 3, // Adjust the width as needed
+                      // ),
+                      Container(
+                        width: 1, // Adjust the width of the divider
+                        height: 30, // Adjust the height of the divider
+                        color: Colors.white, // Set the color of the divider
                       ),
                       TextButton(
                         style: TextButton.styleFrom(
@@ -470,6 +534,25 @@ class _SubscriptionPageState extends State<SubscriptionPage> {
                     ],
                   ),
                 ],
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            TextButton(
+              style: TextButton.styleFrom(
+                primary: Colors.transparent,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
+                  // side: BorderSide(color: Colors.white),
+                ),
+              ),
+              onPressed: () {
+                // Handle button 1 click
+              },
+              child: Text(
+                'Skip',
+                style: TextStyle(color: Colors.green),
               ),
             ),
           ],

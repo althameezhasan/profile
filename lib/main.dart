@@ -8,6 +8,7 @@ import 'package:profile_design_1/Subscription/SubscriptionPage.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+
   runApp(const MyApp());
 }
 

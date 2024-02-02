@@ -124,6 +124,222 @@ class _SubscriptionSinglePaymentState extends State<SubscriptionSinglePayment> {
                     thickness: 2,
                     color: Colors.black,
                   ),
+                  SizedBox(
+                    width: 8,
+                    height: 15,
+                  ),
+                  TextFormField(
+                    decoration: InputDecoration(
+                      labelText: 'Enter Your Name',
+                      hintText: 'name',
+                      prefixIcon: Icon(Icons.person),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20.0),
+                        borderSide: BorderSide(
+                            color: Colors.black), // Set the border color
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20.0),
+                        borderSide: BorderSide(
+                            color: Colors
+                                .black), // Set the border color when focused
+                      ),
+                      labelStyle: TextStyle(
+                          color: Colors.black), // Set the label text color
+                    ),
+                  ),
+                  SizedBox(
+                    width: 8,
+                    height: 15,
+                  ),
+                  TextFormField(
+                    decoration: InputDecoration(
+                      labelText: 'Enter Mobile Number',
+                      hintText: '+91 123456789',
+                      prefixIcon: Icon(Icons.phone),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20.0),
+                        borderSide: BorderSide(
+                            color: Colors.black), // Set the border color
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20.0),
+                        borderSide: BorderSide(
+                            color: Colors
+                                .black), // Set the border color when focused
+                      ),
+                      labelStyle: TextStyle(
+                          color: Colors.black), // Set the label text color
+                    ),
+                  ),
+                  SizedBox(
+                    width: 8,
+                    height: 30,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      // SizedBox(height: 0.0), // Space between icon and text
+                      Text(
+                        "Month",
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.black,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      SizedBox(height: 5.0), // Space between icon and text
+                      Text(
+                        'February',
+                        style: TextStyle(fontSize: 14, color: Colors.black),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    width: 8,
+                    height: 10,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      // SizedBox(height: 0.0), // Space between icon and text
+                      Text(
+                        "Amount",
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.black,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      SizedBox(height: 5.0), // Space between icon and text
+                      Text(
+                        '₹1004.99',
+                        style: TextStyle(fontSize: 14, color: Colors.black),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    width: 8,
+                    height: 10,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      // SizedBox(height: 0.0), // Space between icon and text
+                      Text(
+                        "Begins",
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.black,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      SizedBox(height: 5.0), // Space between icon and text
+                      Text(
+                        '01-02-2024',
+                        style: TextStyle(fontSize: 14, color: Colors.black),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    width: 8,
+                    height: 10,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      // SizedBox(height: 0.0), // Space between icon and text
+                      Text(
+                        "Ends",
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.black,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      SizedBox(height: 5.0), // Space between icon and text
+                      Text(
+                        '01-02-2025',
+                        style: TextStyle(fontSize: 14, color: Colors.black),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    width: 8,
+                    height: 10,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      // SizedBox(height: 0.0), // Space between icon and text
+                      Text(
+                        "Type",
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.black,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      SizedBox(height: 5.0), // Space between icon and text
+                      Text(
+                        'Standard',
+                        style: TextStyle(fontSize: 14, color: Colors.black),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    width: 8,
+                    height: 20,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      TextButton(
+                        style: TextButton.styleFrom(
+                          primary: Color.fromARGB(0, 0, 0, 0),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                            // side: BorderSide(color: Colors.white),
+                          ),
+                        ),
+                        onPressed: () {
+                          // Handle button 1 click
+                        },
+                        child: Text(
+                          'Cancel',
+                          style: TextStyle(color: Colors.black),
+                        ),
+                      ),
+                      // VerticalDivider(
+                      //   color: Colors.black, // Adjust the color as needed
+                      //   thickness: 4,
+                      //   width: 20,
+                      //   indent: 3,
+                      //   endIndent: 3, // Adjust the width as needed
+                      // ),
+                      Container(
+                        width: 1, // Adjust the width of the divider
+                        height: 30, // Adjust the height of the divider
+                        color: Colors.black, // Set the color of the divider
+                      ),
+                      TextButton(
+                        style: TextButton.styleFrom(
+                          primary: Colors.transparent,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                            // side: BorderSide(color: Colors.white),
+                          ),
+                        ),
+                        onPressed: () {
+                          // Handle button 1 click
+                        },
+                        child: Text(
+                          'Pay Now',
+                          style: TextStyle(color: Colors.black),
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),

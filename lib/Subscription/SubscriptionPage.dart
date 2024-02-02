@@ -2,6 +2,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:profile_design_1/Subscription/SubscriptionMultiowner.dart';
 import 'package:profile_design_1/Subscription/SubscriptionSinglePayment.dart';
 // import 'package:profile_design_1/profile/profile_page.dart';
 import 'package:profile_design_1/utils/color_utils.dart';
@@ -161,9 +162,9 @@ class _SubscriptionPageState extends State<SubscriptionPage> {
                   SizedBox(width: 16.0),
                   VerticalDivider(
                     color: Colors.white,
-                    width: 10,
+                    width: 5,
                     thickness: 1,
-                    indent: 10,
+                    indent: 2,
                     endIndent: 10,
                   ),
                   Row(
@@ -215,7 +216,12 @@ class _SubscriptionPageState extends State<SubscriptionPage> {
                           ),
                         ),
                         onPressed: () {
-                          // Handle button 1 click
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => MultiUserOwner(),
+                            ),
+                          ); // Handle button 1 click
                         },
                         child: Text(
                           'Multiple User',
@@ -328,7 +334,7 @@ class _SubscriptionPageState extends State<SubscriptionPage> {
                     color: Colors.white,
                     width: 10,
                     thickness: 1,
-                    indent: 10,
+                    indent: 2,
                     endIndent: 10,
                   ),
                   Row(
@@ -481,7 +487,7 @@ class _SubscriptionPageState extends State<SubscriptionPage> {
                     color: Colors.white,
                     width: 10,
                     thickness: 1,
-                    indent: 10,
+                    indent: 2,
                     endIndent: 10,
                   ),
                   Row(
